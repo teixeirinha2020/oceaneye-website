@@ -77,12 +77,12 @@ export function Specs() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mt-8 overflow-hidden rounded-3xl border border-border">
+          <div className="mt-8 overflow-hidden rounded-3xl">
             <Image
-              src="/ground-track.png"
-              alt="Mapa do ground track da órbita heliossíncrona do OceanEye com cobertura de Portugal e Chile"
-              width={1024}
-              height={576}
+              src="/simulacao-orbita.png"
+              alt="Simulação da órbita heliossíncrona do OceanEye com cobertura de Portugal, Chile e ligação à Ground Station de Svalbard"
+              width={1920}
+              height={949}
               className="h-56 w-full object-cover sm:h-72"
             />
           </div>
@@ -108,7 +108,7 @@ export function Specs() {
           </div>
         </Reveal>
         <Reveal delay={0.3}>
-          <div className="mt-6 overflow-hidden rounded-3xl border border-border bg-card p-4 sm:p-8">
+          <div className="mt-6 overflow-hidden rounded-3xl bg-card">
             <Model3D
               src="/oceaneye-interior.glb"
               alt="Modelo 3D interativo do layout interno do CubeSat 16U do OceanEye, com payload, propulsão, rodas de reação e bateria coloridos por subsistema"
@@ -117,6 +117,7 @@ export function Specs() {
               fallbackWidth={1456}
               fallbackHeight={1075}
               aspectRatio="1456/1075"
+              aspectRatioMobile="1/1.1"
               cameraOrbit="25deg 75deg 105%"
               hint="Arrasta para explorar o interior"
             />
@@ -168,13 +169,13 @@ export function Specs() {
           </div>
         </Reveal>
         <Reveal delay={0.3}>
-          <div className="mt-6 overflow-hidden rounded-3xl border border-border bg-card p-4 sm:p-8">
+          <div className="mt-6 overflow-hidden rounded-3xl bg-card">
             <Image
               src="/comms-architecture.png"
               alt="Diagrama da arquitetura de comunicações do OceanEye: ligações S-Band para TT&C e X-Band para downlink de dados do payload"
               width={800}
               height={600}
-              className="h-auto w-full max-w-2xl mx-auto"
+              className="h-full w-full object-cover"
             />
           </div>
         </Reveal>
@@ -198,13 +199,13 @@ export function Specs() {
           </div>
         </Reveal>
         <Reveal delay={0.3}>
-          <div className="mt-6 overflow-hidden rounded-3xl border border-border bg-card p-4 sm:p-8">
+          <div className="mt-6 overflow-hidden rounded-3xl bg-card">
             <Image
               src="/electrical-architecture.png"
               alt="Diagrama completo da arquitetura elétrica do OceanEye, incluindo EPS, distribuição de potência, ADCS, propulsão e comunicações"
               width={1115}
               height={747}
-              className="h-auto w-full"
+              className="h-full w-full object-cover"
             />
           </div>
         </Reveal>
@@ -229,13 +230,13 @@ export function Specs() {
         </Reveal>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <Reveal delay={0.3}>
-            <div className="overflow-hidden rounded-3xl border border-border bg-card">
+            <div className="overflow-hidden rounded-3xl bg-card">
               <Image
                 src="/fem-stress.png"
                 alt="Contour plot de tensões de von Mises na estrutura do OceanEye sob carga estática no eixo X"
                 width={1896}
                 height={1246}
-                className="h-auto w-full"
+                className="aspect-[4/3] w-full object-cover"
               />
               <p className="px-5 py-3 text-center text-xs font-mono text-muted-foreground">
                 Tensão de von Mises · máx. 101,7 MPa
@@ -243,13 +244,13 @@ export function Specs() {
             </div>
           </Reveal>
           <Reveal delay={0.35}>
-            <div className="overflow-hidden rounded-3xl border border-border bg-card">
+            <div className="overflow-hidden rounded-3xl bg-card">
               <Image
                 src="/fem-displacement.png"
                 alt="Contour plot de deslocamento na estrutura do OceanEye sob carga estática no eixo X"
                 width={1856}
                 height={1235}
-                className="h-auto w-full"
+                className="aspect-[4/3] w-full object-cover"
               />
               <p className="px-5 py-3 text-center text-xs font-mono text-muted-foreground">
                 Deslocamento máx. · 1,28 mm

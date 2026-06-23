@@ -8,6 +8,7 @@ const links = [
   { href: "#desafio", label: "Desafio" },
   { href: "#solucao", label: "Solução" },
   { href: "#specs", label: "Specs" },
+  { href: "#documentos", label: "Docs" },
   { href: "#sustentabilidade", label: "Eco" },
   { href: "#equipa", label: "Equipa" },
 ]

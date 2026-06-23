@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "motion/react"
 import { ArrowDown, Globe2 } from "lucide-react"
 import { Model3D } from "./model-3d"
@@ -26,14 +27,21 @@ export function Hero() {
           CubeSat 16U · Observação da Terra
         </motion.div>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="mt-6 text-balance text-5xl font-semibold tracking-tight text-glow sm:text-7xl"
+          className="mt-6"
         >
-          OceanEye
-        </motion.h1>
+          <Image
+            src="/oceaneye-logo.png"
+            alt="OceanEye"
+            width={841}
+            height={165}
+            priority
+            className="h-16 w-auto drop-shadow-[0_0_24px_oklch(0.78_0.14_200_/_0.45)] sm:h-24"
+          />
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -85,6 +93,9 @@ export function Hero() {
             alt="Modelo 3D interativo do satélite OceanEye com painéis solares desdobrados"
             fallbackSrc="/oceaneye-cad.png"
             fallbackAlt="Modelo CAD do satélite OceanEye com painéis solares desdobrados"
+            aspectRatio="1016/694"
+            aspectRatioMobile="1/1.2"
+            cameraOrbitMobile="0deg 75deg 60%"
             className="drop-shadow-[0_24px_48px_rgba(0,0,0,0.55)]"
           />
         </motion.div>

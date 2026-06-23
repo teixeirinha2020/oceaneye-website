@@ -40,7 +40,7 @@ export function Challenge() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-8 overflow-hidden rounded-3xl border border-border">
+          <div className="mt-8 overflow-hidden rounded-3xl">
             <Image
               src="/ocean-bloom.png"
               alt="Vista de satélite de um bloom de algas verde junto à costa com detritos plásticos"
